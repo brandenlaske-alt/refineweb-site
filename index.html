@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<title>Refine — A small studio for growth-focused websites</title>
+<meta name="description" content="Refine is a small studio that builds growth-focused websites and the marketing dashboards that prove them. For growth-stage SMB SaaS and multi-location local businesses.">
+<link rel="canonical" href="https://refineweb.io/">
+<meta property="og:title" content="Refine — A small studio for growth-focused websites">
+<meta property="og:description" content="Refine builds growth-focused websites and the marketing dashboards that prove them. We work with a small number of businesses at a time.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://refineweb.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#FBFAF7; --ink:#16150F; --ink-soft:#3B382F; --mut:#8A8578;
+  --line:#E4E0D4; --line-2:#D3CDBD; --field:#F2EFE7;
+  --accent:#1F4E4A; --accent-soft:#2F6E68;
+  --disp:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --pad:clamp(1.25rem,5vw,4rem);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--accent);color:var(--paper)}
+a{color:inherit}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(251,250,247,.88);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 var(--pad);height:64px}
+.brand{display:flex;align-items:baseline;gap:.55rem;text-decoration:none;color:inherit;transition:opacity .2s}
+.brand:hover{opacity:.6}
+.brand-mark{font-family:var(--disp);font-weight:600;font-size:21px;letter-spacing:-.015em}
+.brand-tag{font-family:var(--mono);font-size:10px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:.55rem .9rem;border:1px solid var(--ink);border-radius:2px;transition:background .2s,color .2s}
+.nav-cta:hover{background:var(--ink);color:var(--paper)}
+
+.wrap{max-width:1040px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.wrap-sm{max-width:720px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+/* HERO */
+.hero{padding:clamp(4rem,10vw,8rem) 0 clamp(3rem,7vw,5rem);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem;display:inline-flex;align-items:center;gap:.6rem}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--accent)}
+.hero-title{font-family:var(--disp);font-weight:500;font-size:clamp(40px,7vw,78px);line-height:1.03;letter-spacing:-.028em;max-width:22ch;color:var(--ink)}
+.hero-title em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero-sub{font-family:var(--disp);font-weight:400;font-style:italic;font-size:clamp(18px,2.2vw,22px);color:var(--ink-soft);margin-top:1.75rem;line-height:1.45;max-width:48ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:3rem;align-items:center}
+.btn-primary{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper);background:var(--ink);text-decoration:none;padding:.95rem 1.4rem;border-radius:2px;transition:background .25s}
+.btn-primary:hover{background:var(--accent)}
+.btn-text{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:3px;transition:color .2s,border-color .2s}
+.btn-text:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* CONSTRAINT */
+.constraint{background:var(--ink);color:var(--paper);padding:clamp(2.75rem,5vw,3.75rem) 0}
+.constraint .wrap-sm{text-align:center}
+.constraint-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft);margin-bottom:1.25rem}
+.constraint-p{font-family:var(--disp);font-weight:400;font-size:clamp(21px,2.6vw,28px);line-height:1.4;letter-spacing:-.01em}
+.constraint-p .num{font-family:var(--disp);font-weight:600;font-style:italic;color:var(--accent-soft)}
+
+/* SECTION */
+section.sec{padding:clamp(4rem,8vw,6rem) 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2.75rem;flex-wrap:wrap}
+.sec-idx{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.08em;font-weight:500}
+.sec-title{font-family:var(--disp);font-weight:500;font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;line-height:1.1}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line-2)}
+.service{padding:1.75rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.service:nth-child(2n){border-right:none}
+.service:nth-last-child(-n+2){border-bottom:none}
+.service-h{font-family:var(--disp);font-weight:500;font-size:19px;letter-spacing:-.005em;color:var(--ink);margin-bottom:.6rem;line-height:1.3}
+.service-p{font-size:14.5px;color:var(--ink-soft);line-height:1.65}
+.services-foot{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.02em;margin-top:1.5rem;font-style:italic}
+.services-foot strong{color:var(--accent);font-style:normal;font-weight:500}
+
+/* HOW */
+.how p{color:var(--ink-soft);margin-bottom:1.1rem;font-size:17px;line-height:1.75}
+.how p strong{color:var(--ink);font-weight:600}
+
+/* WHO */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.who-col{padding:2rem 2rem 2rem 0;border-right:1px solid var(--line)}
+.who-col:last-child{padding-right:0;padding-left:2rem;border-right:none}
+.who-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.who-h{font-family:var(--disp);font-weight:500;font-size:22px;letter-spacing:-.01em;margin-bottom:.75rem;line-height:1.25}
+.who-p{color:var(--ink-soft);font-size:15.5px;line-height:1.65}
+
+/* PARTNERS */
+.partners{background:var(--field);border:1px solid var(--line-2);padding:2rem 2.25rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
+.partners-copy{flex:1;min-width:240px}
+.partners-copy p{color:var(--ink-soft);line-height:1.6;font-size:15.5px}
+.partners-copy strong{color:var(--accent);font-weight:600}
+.partners-mark{font-family:var(--disp);font-weight:600;font-size:28px;letter-spacing:-.02em;color:var(--ink);padding:.5rem 1rem;border:1px solid var(--ink);border-radius:2px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:var(--paper);padding:clamp(4rem,8vw,6rem) 0}
+.contact-label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft);margin-bottom:1.5rem}
+.contact-h{font-family:var(--disp);font-weight:500;font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.022em;max-width:18ch}
+.contact-h em{font-style:italic;color:var(--accent-soft)}
+.contact-p{margin-top:1.5rem;font-size:17px;line-height:1.65;color:rgba(251,250,247,.72);max-width:52ch}
+.contact-cta{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center}
+.contact-email{font-family:var(--disp);font-size:22px;color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(251,250,247,.3);padding-bottom:4px;transition:border-color .2s,color .2s}
+.contact-email:hover{color:var(--accent-soft);border-bottom-color:var(--accent-soft)}
+.contact-sub{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(251,250,247,.42);margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(251,250,247,.12);display:flex;flex-wrap:wrap;gap:1rem 2.5rem}
+
+/* FOOTER */
+footer{padding:2rem 0;border-top:1px solid var(--line);background:var(--paper)}
+.foot{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mut)}
+
+/* RESPONSIVE */
+@media(max-width:720px){
+  .services{grid-template-columns:1fr}
+  .service{border-right:none}
+  .service:nth-child(2n-1){border-bottom:1px solid var(--line)!important}
+  .service:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+  .service:last-child{border-bottom:none!important}
+  .who-grid{grid-template-columns:1fr}
+  .who-col{padding:1.75rem 0;border-right:none;border-bottom:1px solid var(--line)}
+  .who-col:last-child{padding-left:0;border-bottom:none}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="/">
+    <span class="brand-mark">Refine</span>
+    <span class="brand-tag">Studio</span>
+  </a>
+  <a class="nav-cta" href="#talk">Start a project</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-eyebrow">A small digital studio</p>
+      <h1 class="hero-title">We build growth-focused websites and the marketing <em>dashboards</em> that prove them.</h1>
+      <p class="hero-sub">For growth-stage SMB SaaS and multi-location local businesses.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#talk">Start a project</a>
+        <a class="btn-text" href="#how">See how we work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSTRAINT -->
+  <section class="constraint">
+    <div class="wrap-sm">
+      <p class="constraint-label">By design</p>
+      <p class="constraint-p">We work with a small number of businesses at a time. Right now, that's <span class="num">three</span>. One build at a time, start to finish.</p>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-idx">01</span>
+        <h2 class="sec-title">What we do</h2>
+      </div>
+      <div class="services">
+        <div class="service">
+          <h3 class="service-h">Website design and development</h3>
+          <p class="service-p">Growth-focused builds. The site is a measurement surface, not just a brochure. Project fee.</p>
+        </div>
+        <div class="service">
+          <h3 class="service-h">Marketing dashboards</h3>
+          <p class="service-p">The measurement system you take with you. Visibility into funnels, workflows, and attribution from day one. Project fee.</p>
+        </div>
+        <div class="service">
+          <h3 class="service-h">Organic growth</h3>
+          <p class="service-p">SEO, content, and AEO. The infrastructure under long-term pipeline. Monthly retainer, customized to needs and goals.</p>
+        </div>
+        <div class="service">
+          <h3 class="service-h">Ongoing optimization</h3>
+          <p class="service-p">Maintenance, iteration, and improvements after launch. We stay on if you want us to; the dashboard works either way. Monthly retainer.</p>
+        </div>
+      </div>
+      <p class="services-foot">For <strong>paid growth</strong>, we work closely with Tower33.</p>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="sec how" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-idx">02</span>
+        <h2 class="sec-title">How we work</h2>
+      </div>
+      <div class="wrap-sm" style="padding:0">
+        <p><strong>One project at a time, start to finish.</strong> No parallel builds, no handing you to a junior mid-project.</p>
+        <p>We ship the dashboard with the build, so you can see the funnel from day one. If you want ongoing work after launch, we stay on as a monthly retainer customized to what you need. If you don't, you own everything we built and we hand it off cleanly.</p>
+        <p>The point isn't to keep you dependent on us. The point is to build a system you can run, and to stay on only as long as the work keeps earning its retainer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE WORK WITH -->
+  <section class="sec" id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-idx">03</span>
+        <h2 class="sec-title">Who we work with</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who-col">
+          <p class="who-label">Fit one</p>
+          <h3 class="who-h">Growth-stage SMB SaaS</h3>
+          <p class="who-p">You've got early signal, product-market resonance is forming, and you want to compound growth without hiring an in-house marketing team yet.</p>
+        </div>
+        <div class="who-col">
+          <p class="who-label">Fit two</p>
+          <h3 class="who-h">Multi-location local businesses</h3>
+          <p class="who-p">You've got real footprint across locations and want digital infrastructure that keeps up with the operation on the ground.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="sec" id="partners">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-idx">04</span>
+        <h2 class="sec-title">Partners</h2>
+      </div>
+      <div class="partners">
+        <div class="partners-mark">Tower33</div>
+        <div class="partners-copy">
+          <p>For <strong>paid growth</strong>, we work closely with Tower33. When you need both, we coordinate the handoff so the funnel we built reports the data they need to run against.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="talk">
+    <div class="wrap">
+      <p class="contact-label">Let's talk</p>
+      <h2 class="contact-h">If you think we're <em>a fit</em>, write us a few sentences.</h2>
+      <p class="contact-p">Tell us where you are, what you need, and what you've already tried. We review inquiries as slots open. If you're a fit for the next one, we'll reply within a few days.</p>
+      <div class="contact-cta">
+        <a class="contact-email" href="mailto:hello@refineweb.io">hello@refineweb.io</a>
+      </div>
+      <div class="contact-sub">
+        <span>Refine Studio</span>
+        <span>Currently serving 3 of 3 active clients</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Refine Studio</span>
+    <span><a href="mailto:hello@refineweb.io" style="color:inherit;text-decoration:none">hello@refineweb.io</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
