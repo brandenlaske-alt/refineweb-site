@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Refine social card">
+  <title>Refine · social / OG card (1200×630)</title>
+  <rect width="1200" height="630" fill="#F5F1E8"/>
+  <!-- Mark card -->
+  <rect x="80" y="80" width="140" height="140" rx="22" fill="#0B1014"/>
+  <text x="150" y="186"
+        font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-weight="600"
+        font-size="92"
+        letter-spacing="-2"
+        text-anchor="middle">
+    <tspan fill="#2F6E68">&lt;</tspan><tspan fill="#F5F1E8">r</tspan><tspan fill="#2F6E68">&gt;</tspan>
+  </text>
+  <!-- Wordmark -->
+  <text x="240" y="186"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-weight="700"
+        font-size="88"
+        letter-spacing="-3"
+        fill="#0B1014">refine</text>
+  <!-- Tagline block -->
+  <text x="80" y="400"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-weight="700"
+        font-size="86"
+        letter-spacing="-3"
+        fill="#0B1014">A studio for digital</text>
+  <text x="80" y="490"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-weight="700"
+        font-size="86"
+        letter-spacing="-3"
+        fill="#0B1014">marketing and web.</text>
+  <!-- Footer line -->
+  <text x="80" y="580"
+        font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-weight="500"
+        font-size="24"
+        letter-spacing="2"
+        fill="#1F4E4A">REFINEWEB.IO · GROWING BUSINESSES &amp; BRANDS SINCE 2012</text>
+</svg>

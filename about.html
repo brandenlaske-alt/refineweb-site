@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<title>&lt;r&gt; Refine · About</title>
+<meta name="description" content="A digital studio. Why we work with a small number of businesses at a time, and what that means for the work we ship.">
+<link rel="canonical" href="https://refineweb.io/about.html">
+<meta property="og:title" content="Refine · About">
+<meta property="og:description" content="A digital studio. Why we work with a small number of businesses at a time.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://refineweb.io/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#F5F1E8; --ink:#0B1014; --ink-soft:#3A3A3A; --mut:#888888;
+  --line:#DCD8CF; --line-2:#C9C4B4; --field:#F0EBE0;
+  --accent:#1F4E4A; --accent-soft:#2F6E68;
+  --blue:#4A7BD8; --blue-soft:#8AADE4; --blue-tint:#E6EFFB; --gold:#D4A253;
+  --disp:'Inter',system-ui,sans-serif; --sans:'Inter',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --pad:clamp(1.25rem,5vw,4rem);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--accent);color:var(--paper)}
+a{color:inherit}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(245,241,232,.9);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 var(--pad);height:64px}
+.brand{display:inline-flex;align-items:baseline;gap:.6rem;text-decoration:none;color:inherit;transition:opacity .2s}
+.brand:hover{opacity:.6}
+.brand-mark{font-family:var(--mono);font-weight:600;font-size:22px;letter-spacing:-.015em;line-height:1;color:var(--ink)}
+.brand-mark .bracket{color:var(--accent);font-weight:500}
+.brand-tag{font-family:var(--mono);font-size:10.5px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;padding-left:.35rem;border-left:1px solid var(--line);padding-top:.1rem;padding-bottom:.1rem}
+.nav-right{display:flex;align-items:center;gap:1.4rem}
+.nav-link{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;transition:color .2s;white-space:nowrap;display:inline-flex;align-items:center;line-height:1}
+.nav-link:hover{color:var(--accent)}
+.nav-link.on{color:var(--accent)}
+.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:.55rem .9rem;border:1px solid var(--ink);border-radius:2px;transition:background .2s,color .2s;display:inline-flex;align-items:center;line-height:1}
+.nav-cta:hover{background:var(--ink);color:var(--paper)}
+
+.wrap{max-width:960px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.wrap-sm{max-width:720px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+/* HERO */
+.hero{padding:clamp(4.5rem,10vw,8rem) 0 clamp(3rem,6vw,4.5rem);border-bottom:1px solid var(--line)}
+.hero-mark{font-family:var(--mono);font-size:14px;font-weight:500;color:var(--accent);letter-spacing:.02em;margin-bottom:2rem;display:inline-block}
+.hero-title{font-family:var(--disp);font-weight:700;font-size:clamp(42px,7vw,76px);line-height:1.05;letter-spacing:-.028em;color:var(--ink);max-width:18ch}
+.hero-title em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero-sub-text{font-family:var(--disp);font-weight:400;font-style:italic;font-size:clamp(18px,2vw,22px);color:var(--ink-soft);max-width:50ch;margin-top:1.5rem;line-height:1.5}
+
+/* SECTION */
+.about-sec{padding:clamp(3.5rem,6vw,5rem) 0;border-bottom:1px solid var(--line)}
+.about-sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.about-sec-tag{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.03em;font-weight:500}
+.about-sec-title{font-family:var(--disp);font-weight:600;font-size:clamp(28px,4vw,38px);letter-spacing:-.02em;line-height:1.1}
+.about-sec p{color:var(--ink-soft);font-size:17px;line-height:1.8;margin-bottom:1.1rem;max-width:62ch}
+.about-sec p:last-child{margin-bottom:0}
+.about-sec p strong{color:var(--ink);font-weight:600}
+
+/* PRINCIPLES */
+.principles{background:var(--field);padding:clamp(3rem,5vw,4rem) 0;border-bottom:1px solid var(--line)}
+.p-list{display:grid;gap:1.5rem;margin-top:1.75rem}
+.p-item{padding:1.75rem 2rem;background:var(--paper);border:1px solid var(--line-2);border-left:3px solid var(--accent)}
+.p-item h3{font-family:var(--disp);font-weight:600;font-size:20px;color:var(--ink);margin-bottom:.6rem;letter-spacing:-.01em;line-height:1.3}
+.p-item p{color:var(--ink-soft);font-size:15.5px;line-height:1.65;margin:0;max-width:none}
+
+/* CONTACT */
+.contact{background:var(--ink);color:var(--paper);padding:clamp(4rem,8vw,6rem) 0}
+.contact-h{font-family:var(--disp);font-weight:600;font-size:clamp(30px,5vw,48px);line-height:1.1;letter-spacing:-.022em;max-width:22ch}
+.contact-h em{font-style:italic;color:var(--accent-soft)}
+.contact-p{margin-top:1.5rem;font-size:16.5px;line-height:1.65;color:rgba(245,241,232,.72);max-width:50ch}
+.contact-cta-row{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center}
+.btn-light{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--paper);border:none;padding:1rem 1.5rem;border-radius:2px;cursor:pointer;transition:background .25s,color .25s;text-decoration:none;display:inline-block}
+.btn-light:hover{background:var(--accent-soft);color:var(--paper)}
+.contact-fallback-inline{font-family:var(--mono);font-size:12px;letter-spacing:.03em;color:rgba(245,241,232,.5)}
+.contact-fallback-inline a{color:rgba(245,241,232,.85);text-decoration:none;border-bottom:1px solid rgba(245,241,232,.2);transition:border-color .2s,color .2s}
+.contact-fallback-inline a:hover{color:var(--accent-soft);border-bottom-color:var(--accent-soft)}
+
+/* MODAL (reused) */
+.modal-backdrop{position:fixed;inset:0;background:rgba(11,16,20,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:flex-start;justify-content:center;z-index:200;padding:clamp(1rem,4vw,3rem);overflow-y:auto}
+.modal-backdrop.open{display:flex}
+.modal{background:var(--paper);max-width:560px;width:100%;padding:clamp(1.5rem,3.5vw,2.25rem);border-radius:6px;position:relative;box-shadow:0 20px 60px rgba(11,16,20,.3);margin:auto;animation:modalIn .28s var(--ease)}
+@keyframes modalIn{from{opacity:0;transform:translateY(14px) scale(.98)} to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:.9rem;right:1rem;background:none;border:none;font-size:26px;color:var(--mut);cursor:pointer;line-height:1;padding:.3rem .55rem;transition:color .2s,background .2s;border-radius:3px;font-family:var(--sans);font-weight:300}
+.modal-close:hover{color:var(--ink);background:var(--field)}
+.modal-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
+.modal-title{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.2vw,30px);letter-spacing:-.02em;color:var(--ink);padding-right:2rem;line-height:1.2}
+.modal-sub{font-size:14.5px;color:var(--ink-soft);margin-top:.5rem;margin-bottom:0;line-height:1.55;max-width:44ch}
+.contact-form{margin-top:1.75rem;display:grid;gap:1.1rem}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:.85rem 1rem;margin-top:.6rem}
+.contact-form .field-wide{grid-column:1 / -1}
+.contact-form .form-submit{grid-column:1 / -1}
+@media(max-width:520px){.contact-form{grid-template-columns:1fr}}
+.field-label{font-family:var(--sans);font-size:13.5px;font-weight:500;letter-spacing:-.005em;text-transform:none;color:var(--ink);line-height:1.4}
+.field-opt{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--mut);text-transform:none;font-weight:400;margin-left:.4rem}
+.field input, .field textarea{font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line-2);border-radius:6px;padding:.6rem .85rem;transition:border-color .2s,box-shadow .2s,background .2s;outline:none;resize:vertical;width:100%;line-height:1.45}
+.field input:hover, .field textarea:hover{border-color:var(--mid,#888);background:var(--paper)}
+.field input:focus, .field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,78,74,.14);background:var(--paper)}
+.field input::placeholder, .field textarea::placeholder{color:var(--mut);opacity:.7}
+.field textarea{min-height:84px;line-height:1.45}
+.field-honeypot{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+.form-submit{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:.9rem 1.5rem;cursor:pointer;transition:background .2s,transform .25s;margin-top:.5rem;justify-self:start;border-radius:4px;grid-column:1 / -1}
+.form-submit:hover{background:var(--accent);transform:translateY(-1px)}
+.form-submit:disabled{opacity:.5;cursor:not-allowed}
+.modal-success{margin-top:.5rem;padding:1.75rem;border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--field)}
+.modal-success-h{font-family:var(--disp);font-size:21px;font-weight:500;color:var(--ink);margin-bottom:.5rem}
+.modal-success p{color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+.modal-success a{color:var(--ink);border-bottom:1px solid var(--line);text-decoration:none}
+.modal-success a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+.foot .foot-mark{color:var(--ink);font-weight:600}
+.foot .foot-mark .bracket{color:var(--accent)}
+
+@media(max-width:860px){.nav-right{gap:1rem} .nav-link{font-size:10.5px;letter-spacing:.04em}}
+@media(max-width:640px){.nav-cta{display:none}}
+@media(max-width:520px){.nav-link{font-size:10px;letter-spacing:.02em} .nav-right{gap:.75rem}}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-stagger > *{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal-stagger.in > *:nth-child(1){transition-delay:0s;opacity:1;transform:none}
+.reveal-stagger.in > *:nth-child(2){transition-delay:.08s;opacity:1;transform:none}
+.reveal-stagger.in > *:nth-child(3){transition-delay:.16s;opacity:1;transform:none}
+.reveal-stagger.in > *:nth-child(4){transition-delay:.24s;opacity:1;transform:none}
+.reveal-stagger.in > *:nth-child(5){transition-delay:.32s;opacity:1;transform:none}
+
+/* GRAIN TEXTURE on paper */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 .08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+
+/* MICRO-INTERACTIONS */
+.hero-service{transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .3s var(--ease)}
+.hero-service:hover{background:var(--blue);color:var(--paper);border-color:var(--blue);transform:translateY(-2px)}
+.hero-service:hover .bracket{color:var(--paper)}
+.service-icon{transition:transform .4s var(--ease),color .25s var(--ease)}
+.service:hover .service-icon{transform:rotate(-3deg) scale(1.05);color:var(--blue)}
+.service{transition:background .25s var(--ease)}
+.service:hover{background:rgba(200,92,60,.03)}
+.case-stat{transition:background .25s var(--ease),transform .3s var(--ease)}
+.case-stat:hover{background:var(--field)}
+.case-stat-num{transition:color .25s var(--ease)}
+.case-stat:hover .case-stat-num{color:var(--blue)}
+.p-item{transition:border-left-color .25s var(--ease),transform .3s var(--ease)}
+.p-item:hover{border-left-color:var(--blue);transform:translateX(4px)}
+.phase-num{transition:color .3s var(--ease),transform .4s var(--ease)}
+.phase:hover .phase-num{color:var(--blue);transform:translateX(-4px)}
+
+/* UNDERLINE SWIPE on text links */
+.case-visit{position:relative;overflow:hidden}
+.case-visit::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.case-visit:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* NUM COUNT STYLE for Work page */
+.counting{display:inline-block;min-width:1ch;transition:color .25s var(--ease)}
+
+/* HERO DOTTED GRID BG */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,var(--line-2) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 70% 90% at 20% 10%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 70% 90% at 20% 10%,#000 20%,transparent 70%);opacity:.5;pointer-events:none}
+.hero > .wrap{position:relative;z-index:1}
+
+
+/* === WIDGETS: distinct break under hero + card-shaped sections === */
+:root{--sand:#EBE4D1}
+main{background:var(--sand);margin:0}
+/* Only full-bleed last sections should flush into the back-to-top band; cards keep their natural margin */
+main > section.sec--spotlight:last-child,main > section.phase--spotlight:last-child,main > section.svc--spotlight:last-child,main > section.about-sec--spotlight:last-child,main > section.case--spotlight:last-child,main > section.sec--dark:last-child,main > section.phase--dark:last-child,main > section.svc--dark:last-child,main > section.about-sec--dark:last-child{margin-bottom:0 !important}
+.hero{background:var(--paper);border-bottom:none;position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent 0,var(--line-2) 20%,var(--ink-soft) 50%,var(--line-2) 80%,transparent 100%);opacity:.35}
+section.sec, section.phase, section.svc, section.about-sec, section.case{
+  background:var(--paper);
+  border:1px solid var(--line-2);
+  border-radius:10px;
+  margin:clamp(1.25rem,2.5vw,2rem) clamp(.75rem,2.5vw,2rem);
+  box-shadow:0 1px 2px rgba(11,16,20,.03), 0 14px 28px -22px rgba(11,16,20,.14);
+  overflow:hidden;
+  transition:box-shadow .35s var(--ease),transform .35s var(--ease);
+  position:relative
+}
+section.sec:hover, section.phase:hover, section.svc:hover, section.about-sec:hover, section.case:hover{
+  box-shadow:0 1px 2px rgba(11,16,20,.04), 0 22px 42px -22px rgba(11,16,20,.18)
+}
+section.sec, section.phase, section.svc, section.about-sec{border-bottom:1px solid var(--line-2)}
+.svc:nth-child(odd), .svc:nth-child(even){background:var(--paper)}
+.constraint, .not-us, .contact, section.work{background:var(--ink);border-radius:0;margin:0;box-shadow:none;border:0}
+section.work{background:var(--sand)}
+section.sec:first-of-type, section.phase:first-of-type, section.svc:first-of-type, section.about-sec:first-of-type{margin-top:clamp(2rem,4vw,3rem)}
+section.work section.case:first-of-type{margin-top:clamp(2rem,4vw,3rem)}
+@media(max-width:640px){
+  section.sec, section.phase, section.svc, section.about-sec, section.case{
+    margin-left:.5rem;margin-right:.5rem;border-radius:8px
+  }
+}
+
+/* === SERVICES NAV DROPDOWN === */
+.nav-dropdown{position:relative;display:inline-flex;align-items:center;line-height:1}
+.nav-dropdown > .nav-link{display:inline-flex;align-items:center;gap:.35rem;line-height:1;padding:0}
+.nav-dropdown > .nav-link svg{transition:transform .3s var(--ease);color:var(--mut);width:9px;height:9px;flex:0 0 auto}
+.nav-dropdown:hover > .nav-link svg,.nav-dropdown:focus-within > .nav-link svg{transform:rotate(180deg);color:var(--accent)}
+.nav-dropdown:hover > .nav-link,.nav-dropdown:focus-within > .nav-link{color:var(--accent)}
+/* bridge hover gap between trigger and menu */
+.nav-dropdown::after{content:"";position:absolute;top:100%;left:-24px;right:-24px;height:16px}
+.nav-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.98);transform-origin:top center;min-width:360px;background:var(--paper);border:1px solid var(--line-2);border-radius:12px;box-shadow:0 32px 56px -20px rgba(11,16,20,.28),0 2px 6px rgba(11,16,20,.04);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease),visibility 0s linear .28s;z-index:120;overflow:hidden}
+.nav-dropdown:hover > .nav-menu,.nav-dropdown:focus-within > .nav-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0) scale(1);transition-delay:0s}
+/* Head band */
+.nav-menu-head{display:flex;flex-direction:column;gap:.2rem;padding:1rem 1.1rem .85rem;background:linear-gradient(180deg,var(--field) 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
+.nav-menu-eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--accent)}
+.nav-menu-sub{font-family:var(--sans);font-size:12.5px;font-weight:500;color:var(--ink-soft);letter-spacing:0;text-transform:none;line-height:1.3}
+/* Rows */
+.nav-menu-rows{padding:.4rem}
+.nav-menu-item{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:.75rem;padding:.7rem .85rem;text-decoration:none;color:var(--ink);border-radius:7px;position:relative;transition:background .2s var(--ease),color .2s var(--ease)}
+.nav-menu-item + .nav-menu-item{box-shadow:inset 0 1px 0 var(--line)}
+.nav-menu-item:hover,.nav-menu-item:focus-visible{background:rgba(31,78,74,.06);color:var(--accent);outline:none}
+.nav-menu-item:hover + .nav-menu-item,.nav-menu-item:focus-visible + .nav-menu-item{box-shadow:none}
+.nav-menu-num{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--accent);letter-spacing:.04em;transition:color .2s}
+.nav-menu-item:hover .nav-menu-num{color:var(--blue)}
+.nav-menu-label{font-family:var(--sans);font-size:14.5px;font-weight:500;letter-spacing:-.005em;line-height:1.3;text-transform:none}
+.nav-menu-arrow{color:var(--line-2);transition:transform .25s var(--ease),color .2s;transform:translateX(-6px);opacity:0}
+.nav-menu-item:hover .nav-menu-arrow,.nav-menu-item:focus-visible .nav-menu-arrow{color:var(--accent);transform:translateX(0);opacity:1}
+
+/* Dropdown section grouping */
+.nav-menu-section{padding:.3rem}
+.nav-menu-section + .nav-menu-section{border-top:1px solid var(--line);margin-top:.1rem;padding-top:.5rem}
+.nav-menu-section-head{padding:.3rem .55rem .4rem}
+.nav-menu-section-eyebrow{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.nav-menu-rows{padding:0}
+/* Footer "see all" */
+.nav-menu-foot{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.95rem 1.1rem;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;transition:background .22s var(--ease),color .22s}
+.nav-menu-foot:hover{background:var(--accent);color:var(--paper)}
+.nav-menu-foot .nav-menu-arrow{color:currentColor;opacity:1;transform:none}
+.nav-menu-foot:hover .nav-menu-arrow{transform:translateX(4px)}
+@media(max-width:640px){.nav-dropdown > .nav-link svg{display:none}.nav-menu{display:none}}
+
+/* === SITE FOOTER === */
+.site-footer{background:var(--ink);color:rgba(245,241,232,.72);padding:clamp(3rem,6vw,5rem) var(--pad) 2rem;position:relative;z-index:2}
+.footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr 2fr;gap:3rem}
+@media(max-width:860px){.footer-top{grid-template-columns:1fr;gap:2.5rem}}
+.footer-brand-mark{font-family:var(--mono);font-weight:600;font-size:24px;letter-spacing:-.015em;color:var(--paper);text-decoration:none;display:inline-block;margin-bottom:.9rem;transition:opacity .2s}
+.footer-brand-mark:hover{opacity:.75}
+.footer-bracket{color:var(--accent-soft);font-weight:500}
+.footer-tag{font-size:14.5px;color:rgba(245,241,232,.6);line-height:1.6;max-width:34ch;margin-bottom:1.25rem}
+.footer-since{display:inline-flex;align-items:center;gap:.75rem;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,241,232,.55);margin-bottom:1.5rem;line-height:1.3}
+.footer-since .footer-rule{display:inline-block;width:28px;height:1px;background:var(--accent-soft);flex:0 0 auto}
+.footer-since strong{color:var(--accent-soft);font-weight:600;margin-left:.1rem}
+.footer-social{display:flex;gap:1rem}
+.footer-social-link{display:inline-flex;align-items:center;gap:.55rem;padding:.6rem .9rem;border:1px solid rgba(245,241,232,.18);border-radius:3px;color:rgba(245,241,232,.85);text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
+.footer-social-link:hover{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.footer-social-link svg{flex:0 0 auto}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+@media(max-width:640px){.footer-cols{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:460px){.footer-cols{grid-template-columns:1fr}}
+.footer-col-h{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-soft);font-weight:500;margin-bottom:1rem}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col li{margin-bottom:.55rem}
+.footer-col li a{color:rgba(245,241,232,.72);text-decoration:none;font-size:14px;line-height:1.5;transition:color .2s,padding-left .2s;display:inline-block;border-bottom:0}
+.footer-col li a:hover{color:var(--paper);padding-left:.2rem}
+.footer-bottom{max-width:1200px;margin:3rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(245,241,232,.1);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.footer-copy,.footer-made{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(245,241,232,.4);margin:0}
+.footer-made{color:var(--accent-soft)}
+
+/* === BRAND GREEN ACCENTS === */
+/* 1) Scroll progress bar at the top of the viewport */
+.rfn-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:150;background:transparent;pointer-events:none}
+.rfn-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent) 0%,var(--accent-soft) 100%);transform-origin:left;transition:width .1s linear}
+/* 2) Tint the hero decorative dot grid teal */
+.hero::before{background-image:radial-gradient(circle,rgba(31,78,74,.28) 1px,transparent 1px) !important}
+/* 3) Widget card top-accent line on hover */
+section.sec, section.phase, section.svc, section.about-sec, section.case{position:relative}
+section.sec::before, section.phase::before, section.svc::before, section.about-sec::before, section.case::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent-soft) 100%);opacity:0;transform:scaleX(.3);transform-origin:left;transition:opacity .4s var(--ease),transform .5s var(--ease);border-radius:10px 10px 0 0;pointer-events:none}
+section.sec:hover::before, section.phase:hover::before, section.svc:hover::before, section.about-sec:hover::before, section.case:hover::before{opacity:1;transform:scaleX(1)}
+/* 4) Small teal dot before section eyebrows across the site */
+/* 5) Accordion row open state: thin teal left accent */
+.acc-row{position:relative;transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+.acc-row::before{content:"";position:absolute;top:14px;bottom:14px;left:0;width:3px;background:var(--accent);border-radius:3px;opacity:0;transform:scaleY(.3);transform-origin:center;transition:opacity .3s var(--ease),transform .35s var(--ease)}
+.acc-row[data-open="1"]::before{opacity:1;transform:scaleY(1)}
+/* 6) Service row (home page) left accent on hover */
+.service{position:relative;transition:background .25s var(--ease)}
+.service::before{content:"";position:absolute;top:50%;left:-.5rem;transform:translateY(-50%);width:3px;height:0;background:var(--accent);border-radius:3px;transition:height .3s var(--ease)}
+.service:hover::before{height:70%}
+/* 7) In-body links across generic prose get a teal underline treatment */
+.phase-narr a:not(.btn-primary):not(.btn-ghost):not(.acc-cta):not(.btn-text),
+.svc-narr a,
+.about-sec p a,
+.not-us a{color:var(--accent);text-decoration:none;background-image:linear-gradient(0deg,var(--accent),var(--accent));background-position:0 100%;background-repeat:no-repeat;background-size:100% 1px;transition:background-size .25s var(--ease),color .2s}
+.phase-narr a:hover,.svc-narr a:hover,.about-sec p a:hover,.not-us a:hover{color:var(--accent-soft);background-size:100% 2px}
+
+/* === SECTION VARIANTS (break the uniform widget rhythm) === */
+/* 1) --band: strip the card chrome, keep the content; just a top rule and bigger breathing room */
+section.sec--band, section.phase--band, section.svc--band, section.about-sec--band, section.case--band{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  margin:0 !important;
+  padding-top:clamp(3.5rem,7vw,5.5rem) !important;
+  padding-bottom:clamp(3.5rem,7vw,5.5rem) !important;
+  position:relative;
+}
+section.sec--band::before, section.phase--band::before, section.svc--band::before, section.about-sec--band::before, section.case--band::before{display:none !important}
+section.sec--band::after, section.phase--band::after, section.svc--band::after, section.about-sec--band::after{
+  content:"";position:absolute;top:0;left:clamp(1.25rem,5vw,4rem);right:clamp(1.25rem,5vw,4rem);height:1px;background:linear-gradient(90deg,var(--accent) 0%,var(--line-2) 25%,var(--line-2) 75%,transparent 100%);opacity:.5
+}
+
+/* 2) --dark: flip to ink feature. Max one per page. */
+section.sec--dark, section.phase--dark, section.svc--dark, section.about-sec--dark{
+  background:var(--ink) !important;
+  color:var(--paper) !important;
+  border:0 !important;
+  box-shadow:0 1px 2px rgba(11,16,20,.04), 0 24px 48px -20px rgba(11,16,20,.4) !important;
+}
+section.sec--dark::before, section.phase--dark::before, section.svc--dark::before{display:none !important}
+section.sec--dark .sec-title, section.sec--dark .svc-title, section.sec--dark h2, section.sec--dark h3,
+section.phase--dark .phase-title,
+section.svc--dark .svc-title,
+section.about-sec--dark .about-sec-title{color:var(--paper) !important}
+section.sec--dark .sec-tag, section.sec--dark .svc-eyebrow, section.sec--dark .phase-eyebrow,
+section.phase--dark .phase-eyebrow,
+section.svc--dark .svc-eyebrow,
+section.about-sec--dark .about-sec-tag{color:var(--accent-soft) !important}
+section.sec--dark p, section.phase--dark p, section.svc--dark p, section.about-sec--dark p{color:rgba(245,241,232,.72) !important}
+section.sec--dark p strong, section.phase--dark p strong, section.svc--dark p strong, section.about-sec--dark p strong{color:var(--paper) !important}
+section.sec--dark a:not(.btn-primary):not(.btn-ghost), section.phase--dark a:not(.btn-primary):not(.btn-ghost), section.svc--dark a:not(.btn-primary):not(.btn-ghost){color:var(--accent-soft) !important;background-image:linear-gradient(0deg,var(--accent-soft),var(--accent-soft)) !important}
+
+/* 3) --rail: thick vertical teal rail along the left of the card, bigger left padding */
+section.sec--rail, section.phase--rail, section.svc--rail, section.about-sec--rail, section.case--rail{
+  border-left:6px solid var(--accent) !important;
+  padding-left:clamp(1.5rem,3vw,2.5rem) !important;
+}
+section.sec--rail::before, section.phase--rail::before, section.svc--rail::before, section.about-sec--rail::before, section.case--rail::before{display:none !important}
+
+/* 4) --feature: oversized display number watermark in the top-left corner */
+section.sec--feature, section.phase--feature, section.svc--feature, section.case--feature{position:relative;overflow:hidden}
+section.sec--feature .feature-num, section.phase--feature .feature-num, section.svc--feature .feature-num, section.case--feature .feature-num{
+  position:absolute;top:-.5rem;right:1rem;font-family:var(--disp);font-weight:600;font-size:clamp(120px,20vw,220px);line-height:.85;color:var(--accent);opacity:.08;letter-spacing:-.05em;pointer-events:none;user-select:none;z-index:0
+}
+section.sec--feature .wrap, section.phase--feature .wrap, section.svc--feature .wrap, section.case--feature .wrap{position:relative;z-index:1}
+
+/* 5) --tight: compact variant with less padding (good next to a --band) */
+section.sec--tight, section.phase--tight, section.svc--tight{
+  padding-top:clamp(2rem,4vw,3rem) !important;
+  padding-bottom:clamp(2rem,4vw,3rem) !important;
+}
+
+
+/* Partners inner box when nested inside a dark --spotlight section */
+section.sec--spotlight .partners{background:rgba(245,241,232,.06) !important;border:1px solid rgba(245,241,232,.18) !important}
+section.sec--spotlight .partners-copy p{color:rgba(245,241,232,.78) !important}
+section.sec--spotlight .partners-copy strong{color:var(--accent-soft) !important}
+section.sec--spotlight a.partners-mark:not(.btn-primary):not(.btn-ghost){color:var(--paper) !important;border:1px solid rgba(245,241,232,.3) !important;background:transparent !important}
+section.sec--spotlight a.partners-mark:not(.btn-primary):not(.btn-ghost):hover{background:var(--paper) !important;color:var(--ink) !important;border-color:var(--paper) !important}
+section.sec--spotlight .partners-mark .ext{color:var(--accent-soft)}
+
+/* === DRAMATIC SECTION BUILDS === */
+
+/* --spotlight: full-bleed ink section with oversized display headline */
+section.sec--spotlight, section.phase--spotlight, section.svc--spotlight, section.about-sec--spotlight, section.case--spotlight{
+  background:var(--ink) !important;
+  color:var(--paper) !important;
+  border:0 !important;
+  border-radius:0 !important;
+  margin:clamp(2rem,4vw,3rem) 0 !important;
+  padding:clamp(5rem,10vw,8rem) 0 !important;
+  box-shadow:none !important;
+  position:relative;
+  overflow:hidden;
+}
+section.sec--spotlight::before, section.phase--spotlight::before, section.svc--spotlight::before{display:none !important}
+section.sec--spotlight::after, section.phase--spotlight::after, section.svc--spotlight::after{
+  content:"";position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at top right,rgba(31,78,74,.35) 0%,transparent 60%);pointer-events:none
+}
+section.sec--spotlight .wrap, section.phase--spotlight .wrap, section.svc--spotlight .wrap, section.about-sec--spotlight .wrap, section.case--spotlight .wrap{position:relative;z-index:1}
+section.sec--spotlight .sec-title, section.phase--spotlight .phase-title, section.svc--spotlight .svc-title, section.about-sec--spotlight .about-sec-title{
+  font-size:clamp(44px,7vw,80px) !important;letter-spacing:-.03em !important;line-height:1.02 !important;color:var(--paper) !important;max-width:16ch
+}
+section.sec--spotlight .sec-tag, section.phase--spotlight .phase-eyebrow, section.svc--spotlight .svc-eyebrow, section.about-sec--spotlight .about-sec-tag{color:var(--accent-soft) !important}
+section.sec--spotlight p, section.phase--spotlight p, section.svc--spotlight p, section.about-sec--spotlight p{color:rgba(245,241,232,.72) !important;font-size:17px !important}
+section.sec--spotlight p strong{color:var(--paper) !important}
+section.sec--spotlight a:not(.btn-primary):not(.btn-ghost){color:var(--accent-soft) !important}
+
+/* --chapter: watermark giant number sitting behind content, content shifts to the right */
+section.sec--chapter, section.phase--chapter, section.svc--chapter, section.about-sec--chapter, section.case--chapter{
+  position:relative;overflow:hidden
+}
+section.sec--chapter::before, section.phase--chapter::before, section.svc--chapter::before, section.about-sec--chapter::before, section.case--chapter::before{display:none !important}
+section.sec--chapter .chapter-num, section.phase--chapter .chapter-num, section.svc--chapter .chapter-num, section.about-sec--chapter .chapter-num, section.case--chapter .chapter-num{
+  position:absolute;top:50%;left:-2vw;transform:translateY(-50%) rotate(-6deg);font-family:var(--disp);font-weight:700;font-size:clamp(200px,30vw,420px);line-height:.8;color:var(--accent);opacity:.07;letter-spacing:-.06em;pointer-events:none;user-select:none;z-index:0;white-space:nowrap
+}
+section.sec--chapter > .wrap, section.phase--chapter > .wrap, section.svc--chapter > .wrap, section.about-sec--chapter > .wrap, section.case--chapter > .wrap{position:relative;z-index:1;margin-left:auto;max-width:720px;padding-right:clamp(1.25rem,5vw,4rem)}
+
+
+/* Case cards: keep full-width content inside --chapter — the watermark number sits behind, no right-shift */
+section.case--chapter > .wrap, section.case > .wrap{margin-left:0 !important;max-width:none !important;padding-left:clamp(1.25rem,5vw,4rem) !important;padding-right:clamp(1.25rem,5vw,4rem) !important}
+section.case--chapter .chapter-num{right:-2vw;left:auto;top:50%;transform:translateY(-50%) rotate(-6deg);opacity:.055}
+
+/* --split: 50/50 ink column on left with eyebrow + number, paper content on right */
+section.sec--split, section.phase--split, section.svc--split, section.about-sec--split, section.case--split{
+  border:0 !important;border-radius:0 !important;background:transparent !important;box-shadow:none !important;margin:clamp(2rem,4vw,3rem) 0 !important;padding:0 !important;overflow:hidden;display:grid;grid-template-columns:minmax(240px,1fr) 2fr;min-height:380px
+}
+@media(max-width:860px){
+  section.sec--split, section.phase--split, section.svc--split, section.about-sec--split, section.case--split{grid-template-columns:1fr}
+}
+section.sec--split::before, section.phase--split::before, section.svc--split::before, section.about-sec--split::before, section.case--split::before{display:none !important}
+section.sec--split .split-left, section.phase--split .split-left, section.svc--split .split-left, section.about-sec--split .split-left, section.case--split .split-left{
+  background:var(--ink);color:var(--paper);padding:clamp(2.5rem,5vw,4rem) clamp(2rem,4vw,3rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;position:relative;overflow:hidden
+}
+section.sec--split .split-left::after, section.phase--split .split-left::after, section.svc--split .split-left::after, section.about-sec--split .split-left::after, section.case--split .split-left::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent-soft) 100%)
+}
+section.sec--split .split-eyebrow, section.phase--split .split-eyebrow, section.svc--split .split-eyebrow, section.about-sec--split .split-eyebrow, section.case--split .split-eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-soft);font-weight:500
+}
+section.sec--split .split-num, section.phase--split .split-num, section.svc--split .split-num, section.about-sec--split .split-num, section.case--split .split-num{
+  font-family:var(--disp);font-weight:700;font-size:clamp(72px,12vw,140px);letter-spacing:-.045em;line-height:.85;color:var(--paper)
+}
+section.sec--split .split-num em{color:var(--accent-soft);font-style:normal}
+section.sec--split .split-right, section.phase--split .split-right, section.svc--split .split-right, section.about-sec--split .split-right, section.case--split .split-right{
+  background:var(--paper);padding:clamp(2.5rem,5vw,4rem) clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center
+}
+
+/* === BLUE CTA BAND (drop-in for conversion moments) === */
+section.cta-band{
+  background:linear-gradient(135deg,var(--blue) 0%,#2E5CE0 100%);
+  color:var(--paper);
+  border:0 !important;
+  border-radius:12px !important;
+  margin:clamp(1.5rem,3vw,2.5rem) clamp(.75rem,2.5vw,2rem) !important;
+  padding:clamp(2.5rem,5vw,4rem) clamp(1.75rem,4vw,3rem) !important;
+  box-shadow:0 24px 48px -20px rgba(74,123,216,.4), 0 2px 4px rgba(11,16,20,.08) !important;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.6fr auto;
+  gap:2rem;
+  align-items:center;
+}
+section.cta-band::before{display:none !important}
+section.cta-band::after{
+  content:"";position:absolute;top:0;right:0;width:60%;height:100%;background:radial-gradient(ellipse at top right,rgba(255,255,255,.14) 0%,transparent 60%);pointer-events:none
+}
+@media(max-width:720px){section.cta-band{grid-template-columns:1fr}}
+.cta-band .cta-band-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:500;margin-bottom:.75rem;display:block}
+.cta-band .cta-band-h{font-family:var(--disp);font-weight:700;font-size:clamp(26px,3.6vw,38px);letter-spacing:-.025em;line-height:1.1;color:var(--paper);max-width:22ch}
+.cta-band .cta-band-p{color:rgba(255,255,255,.78);font-size:16px;line-height:1.6;margin-top:.75rem;max-width:48ch}
+.cta-band .cta-band-cta{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--paper);text-decoration:none;padding:1rem 1.5rem;border-radius:4px;transition:background .25s,color .25s,transform .25s;display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap}
+.cta-band .cta-band-cta:hover{background:var(--ink);color:var(--paper);transform:translateX(2px)}
+.cta-band .cta-band-cta svg{transition:transform .25s var(--ease)}
+.cta-band .cta-band-cta:hover svg{transform:translateX(3px)}
+
+/* === BACK-TO-TOP BAND (full-bleed, bridges content to the dark footer) === */
+a.footer-back-to-top{
+  display:block;background:var(--accent);color:rgba(245,241,232,.78);text-decoration:none;cursor:pointer;position:relative;z-index:2;
+  padding:1.5rem var(--pad) 1.75rem;
+  border-bottom:1px solid rgba(245,241,232,.14);
+  transition:color .25s var(--ease);
+  margin:0;
+}
+a.footer-back-to-top:hover{color:var(--paper)}
+a.footer-back-to-top .back-top-inner{
+  max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem
+}
+.footer-back-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;justify-self:start}
+.footer-back-mono{font-family:var(--mono);font-size:16px;font-weight:600;color:var(--paper);letter-spacing:-.01em;justify-self:center;opacity:.85;transition:opacity .25s var(--ease,ease),color .25s var(--ease,ease)}
+a.footer-back-to-top:hover .footer-back-mono{opacity:1;color:var(--paper)}
+.footer-back-arrow{justify-self:end;display:inline-flex;align-items:center;padding:.55rem;border:1px solid rgba(245,241,232,.2);border-radius:50%;transition:transform .35s var(--ease),border-color .25s,background .25s}
+a.footer-back-to-top:hover .footer-back-arrow{transform:translateY(-4px);border-color:var(--paper);background:rgba(245,241,232,.06)}
+@media(max-width:520px){
+  a.footer-back-to-top .back-top-inner{grid-template-columns:1fr auto;gap:.5rem}
+  .footer-back-mono{display:none}
+}
+
+/* --wide: full-bleed paper band, no card chrome, keeps content legible */
+section.sec--wide, section.phase--wide, section.svc--wide, section.about-sec--wide, section.case--wide{
+  background:var(--paper) !important;
+  border:0 !important;
+  border-radius:0 !important;
+  margin:0 !important;
+  box-shadow:none !important;
+  padding-top:clamp(3.5rem,7vw,5.5rem) !important;
+  padding-bottom:clamp(3.5rem,7vw,5.5rem) !important;
+  position:relative;
+  overflow:hidden;
+}
+section.sec--wide::before, section.phase--wide::before, section.svc--wide::before, section.about-sec--wide::before, section.case--wide::before{display:none !important}
+
+
+/* === MOBILE HERO: full viewport height, vertically centered === */
+@media(max-width:520px){
+  .hero, .hero--video{
+    min-height:calc(100vh - 64px);
+    min-height:calc(100dvh - 64px);
+    display:flex;
+    align-items:center;
+    padding-top:0;
+    padding-bottom:0;
+  }
+  .hero > .wrap{width:100%;padding-top:1.5rem;padding-bottom:1.5rem}
+}
+/* === MOBILE HERO: center alignment at narrow viewports === */
+@media(max-width:520px){
+  .hero > .wrap{text-align:center}
+  .hero-mark{display:inline-block}
+  .hero-title{max-width:none;margin-left:auto;margin-right:auto}
+  .hero-sub-text{margin-left:auto;margin-right:auto}
+  .hero-services{justify-content:center}
+  .hero-tenure{margin-left:auto;margin-right:auto}
+  .hero-cta,.cta-row-inline{justify-content:center}
+  /* Breadcrumb style (if present) can stay centered too */
+  .svc-crumb{justify-content:center}
+}
+.hero-title em,.contact-h em,.svc-title em,.phase-title em,.about-sec-title em,.case-brand em,.case-h em,.not-us-title em,.modal-title em,.modal-success-h em,.sec-title em{font-style:normal!important;color:inherit!important;font-weight:inherit!important}
+</style>
+</head>
+<body>
+<div class="rfn-progress" aria-hidden="true"><div class="rfn-progress-bar"></div></div>
+
+<nav>
+  <a class="brand" href="/">
+    <span class="brand-mark"><span class="bracket">&lt;</span>r<span class="bracket">&gt;</span></span>
+    <span class="brand-tag">Refine</span>
+  </a>
+  <div class="nav-right">
+    <span class="nav-dropdown"><a class="nav-link" href="/services.html">Services <svg viewBox="0 0 24 24" width="9" height="9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-menu" role="menu" aria-label="Services">
+        <div class="nav-menu-head"><span class="nav-menu-eyebrow">&lt;services&gt;</span><span class="nav-menu-sub">What we help with</span></div>
+        <div class="nav-menu-section">
+          <div class="nav-menu-section-head"><span class="nav-menu-section-eyebrow">&lt;project-based&gt;</span></div>
+          <a class="nav-menu-item" href="/services-web.html" role="menuitem"><span class="nav-menu-num">01</span><span class="nav-menu-label">Website design &amp; development</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="nav-menu-item" href="/services-analytics.html" role="menuitem"><span class="nav-menu-num">02</span><span class="nav-menu-label">Analytics &amp; integrations</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="nav-menu-item" href="/services-dashboards.html" role="menuitem"><span class="nav-menu-num">03</span><span class="nav-menu-label">Marketing dashboards</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="nav-menu-item" href="/services-audit.html" role="menuitem"><span class="nav-menu-num">04</span><span class="nav-menu-label">Digital marketing &amp; pipeline audit</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="nav-menu-section">
+          <div class="nav-menu-section-head"><span class="nav-menu-section-eyebrow">&lt;consulting&gt;</span></div>
+          <a class="nav-menu-item" href="/services-growth.html" role="menuitem"><span class="nav-menu-num">01</span><span class="nav-menu-label">SEO/AEO &amp; organic growth</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="nav-menu-item" href="/services-optimization.html" role="menuitem"><span class="nav-menu-num">02</span><span class="nav-menu-label">Management &amp; scaling</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <a class="nav-menu-foot" href="/services.html" role="menuitem"><span>See all services</span><svg class="nav-menu-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div></span>
+    
+    
+    <a class="nav-link" href="/results.html">Results</a>
+    <a class="nav-link" href="/process.html">Process</a>
+    <a class="nav-link on" href="/about.html">About</a>
+    <a class="nav-cta" href="#talk" onclick="openContactModal(event)">Book an intro call</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero-mark reveal">&lt;about&gt;</span>
+      <h1 class="hero-title reveal" style="transition-delay:.1s">A digital studio, run small on <em>purpose</em>.</h1>
+      <p class="hero-sub-text">Refine is a small studio for websites, dashboards, analytics, and organic growth. We work with a few businesses at a time so each one gets our full attention.</p>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="about-sec reveal">
+    <div class="wrap-sm" style="padding:0">
+      <div class="about-sec-head">
+        <span class="about-sec-tag">&lt;who&gt;</span>
+        <h2 class="about-sec-title">Who's behind this.</h2>
+      </div>
+      <p>Refine is run by <strong>Branden Laske</strong>, a full-stack digital marketer with twelve years in-house across senior living, e-commerce, and SaaS. The playbooks that built this studio were refined running the digital team at Kisco Senior Living and NationalCovers (see <a href="/results.html" style="color:var(--ink);border-bottom:1px solid var(--line-2)">Results</a>), where the same loop kept showing up: build a strong site, wire the measurement, run the organic growth, keep improving. We built Refine to do that loop as a service, with a small team of specialists who can run it end to end.</p>
+      <p>The in-house team is small by design: a lead who scopes and runs every engagement, media writers for all content work, and a technical bench for development, dashboards, and integrations. For paid, social, and video, we work with trusted partners (see <a href="/services.html#not-us" style="color:var(--ink);border-bottom:1px solid var(--line-2)">Services</a>). The reason to keep it small is simple: when something ships from Refine, every piece of it was made by the people who answer your emails.</p>
+    </div>
+  </section>
+
+  <!-- WHY SMALL -->
+  <section class="about-sec about-sec--spotlight reveal">
+    <div class="wrap-sm" style="padding:0">
+      <div class="about-sec-head">
+        <span class="about-sec-tag">&lt;why small&gt;</span>
+        <h2 class="about-sec-title">Why we only work with a few at a time.</h2>
+      </div>
+      <p>A deliberately small book of clients, one project in flight. We don't take new work when we're at capacity, and we tell you up front if the next slot is a quarter out instead of hiding it.</p>
+      <p>The math is simple. A website build + dashboard + organic growth retainer takes real senior attention. When agencies take on dozens of engagements with a shared delivery team, your project becomes a junior's checklist. When we keep the book small, your project is on a senior's desk the whole way through. The output is better. The process is faster. The relationship is simpler. We just don't scale the way most studios do.</p>
+      <p>You won't get an unlimited portfolio, overnight starts, or a sales rep. You will get a studio that's actually paying attention to the engagement you hired us for.</p>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="principles">
+    <div class="wrap-sm" style="padding:0">
+      <div class="about-sec-head">
+        <span class="about-sec-tag">&lt;principles&gt;</span>
+        <h2 class="about-sec-title">How we think about the work.</h2>
+      </div>
+      <div class="p-list">
+        <div class="p-item">
+          <h3>Build measurement in from day one.</h3>
+          <p>A website without a dashboard is a brochure. We build the two together, so you can see what's working while we build.</p>
+        </div>
+        <div class="p-item">
+          <h3>You own what we built.</h3>
+          <p>Your code, your data, your dashboard. No vendor lock-in, no proprietary platform, no "we'll give you access when the invoice clears." If you hire us to build it, you own it the day it ships.</p>
+        </div>
+        <div class="p-item">
+          <h3>Name the partners, don't fake the services.</h3>
+          <p>We don't do paid, social, or video in-house. We'd rather name the partners we trust than pretend to be a one-stop shop and farm the work out to a freelancer you can't vet.</p>
+        </div>
+        <div class="p-item">
+          <h3>Content writing stays with us.</h3>
+          <p>Our media writers work on your content. Not a freelance network, not AI-only output. One voice, one standard, one team.</p>
+        </div>
+        <div class="p-item">
+          <h3>Retainers earn their fee each month.</h3>
+          <p>We size retainers to the actual work, not to a flat recurring number. If a quarter is quiet, we drop the hours. If something breaks or a big opportunity opens up, we scale up. You never pay for a retainer that isn't doing anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- BLUE CTA BAND -->
+  <section class="cta-band">
+    <div>
+      <span class="cta-band-eyebrow">&lt;sound like your kind of team&gt;</span>
+      <h2 class="cta-band-h">Think we'd work well together?</h2>
+      <p class="cta-band-p">Book an intro call. 30 minutes to compare notes on where you are and what you'd want from a studio like us.</p>
+    </div>
+    <a class="cta-band-cta" href="#talk" onclick="openContactModal(event)">Book an intro call<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </section>
+</main>
+
+<a href="#top" class="footer-back-to-top" aria-label="Back to top" onclick="event.preventDefault(); window.scrollTo({top:0,behavior:'smooth'});">
+  <span class="back-top-inner">
+    <span class="footer-back-label">Back to top</span>
+    <span class="footer-back-mono">&lt;r&gt;</span>
+    <span class="footer-back-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></span>
+  </span>
+</a>
+
+
+<!-- CONTACT MODAL -->
+<div class="modal-backdrop" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal" role="document">
+    <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">&lt;book an intro call&gt;</p>
+    <h2 class="modal-title" id="modal-title">Let's book your intro call.</h2>
+    <p class="modal-sub">30-minute call, no pitch deck. We review each inquiry and reply within a few business days.</p>
+
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mbgglrge" method="POST" onsubmit="submitRefineForm(event)">
+      <input type="hidden" name="_subject" value="New Refine Studio inquiry">
+      <input type="text" name="_gotcha" class="field-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field"><label for="rf-name" class="field-label">Name</label><input type="text" id="rf-name" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="rf-email" class="field-label">Email</label><input type="email" id="rf-email" name="email" required autocomplete="email"></div>
+      <div class="field field-wide"><label for="rf-business" class="field-label">Business or website <span class="field-opt">(optional)</span></label><input type="text" id="rf-business" name="business" autocomplete="organization"></div>
+      <div class="field field-wide"><label for="rf-message" class="field-label">What you need</label><textarea id="rf-message" name="message" rows="3" required></textarea></div>
+      <button type="submit" class="form-submit">Book intro call</button>
+    </form>
+
+    <div class="modal-success" id="contactSuccess" style="display:none">
+      <p class="modal-success-h">Thanks, we got it.</p>
+      <p>We'll review and reply within a few business days with a few times for the intro call. If something is urgent in the meantime, reach out on <a href="https://www.linkedin.com/in/branden-christopher/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openContactModal(e){if(e)e.preventDefault();var m=document.getElementById('contactModal');m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(function(){document.getElementById('rf-name').focus()},120)}
+  function closeContactModal(){var m=document.getElementById('contactModal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+  document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===e.currentTarget)closeContactModal()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('contactModal').classList.contains('open'))closeContactModal()});
+  async function submitRefineForm(e){e.preventDefault();var f=e.target,b=f.querySelector('.form-submit'),o=b.textContent;b.disabled=true;b.textContent='Sending...';try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});if(r.ok){f.style.display='none';document.getElementById('contactSuccess').style.display='block';var t=document.getElementById('modal-title');if(t)t.textContent="We'll be in touch.";var s=document.querySelector('.modal-sub');if(s)s.style.display='none';var y=document.querySelector('.modal-eyebrow');if(y)y.style.display='none'}else{throw new Error('fail')}}catch(x){b.textContent=o;b.disabled=false;alert('Something went wrong. Please try again, or reach out on LinkedIn.')}}
+</script>
+
+<script>
+/* SCROLL REVEAL */
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  window.__rfnRevealIo = io;
+})();
+/* COUNT-UP for stat numbers */
+(function(){
+  function animate(el){
+    var raw = el.getAttribute('data-count') || el.textContent.trim();
+    var m = raw.match(/^([^0-9\-]*)([\-+]?[0-9]*\.?[0-9]+)(.*)$/);
+    if(!m) return;
+    var prefix = m[1] || '', target = parseFloat(m[2]), suffix = m[3] || '';
+    var decimals = (m[2].split('.')[1]||'').length;
+    var dur = 1400, start = performance.now();
+    el.setAttribute('data-count', raw);
+    function step(now){
+      var t = Math.min(1,(now-start)/dur);
+      var eased = 1 - Math.pow(1-t,3);
+      var v = target * eased;
+      el.textContent = prefix + (decimals ? v.toFixed(decimals) : Math.round(v).toLocaleString()) + suffix;
+      if(t<1) requestAnimationFrame(step);
+      else el.textContent = raw;
+    }
+    requestAnimationFrame(step);
+  }
+  var io2 = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ animate(e.target); io2.unobserve(e.target); }
+    });
+  },{threshold:.4});
+  document.querySelectorAll('.counting').forEach(function(el){ io2.observe(el); });
+})();
+/* rfn-reveal-io */
+</script>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="footer-brand-mark"><span class="footer-bracket">&lt;</span>r<span class="footer-bracket">&gt;</span> refine</a>
+      <p class="footer-tag">A team for digital marketing and web needs, at any stage.</p>
+      <p class="footer-since"><span class="footer-rule" aria-hidden="true"></span>Growing businesses &amp; brands since <strong>2012</strong></p>
+      <div class="footer-social">
+        <a class="footer-social-link" href="https://www.linkedin.com/in/branden-christopher/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4 class="footer-col-h">Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/results.html">Results</a></li>
+          <li><a href="/process.html">Process</a></li>
+          <li><a href="#talk" onclick="openContactModal(event); return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-h">Services</h4>
+        <ul>
+          <li><a href="/services.html">Overview</a></li>
+          <li><a href="/services-web.html">Website design &amp; development</a></li>
+          <li><a href="/services-analytics.html">Analytics &amp; integrations</a></li>
+          <li><a href="/services-dashboards.html">Marketing dashboards</a></li>
+          <li><a href="/services-growth.html">SEO/AEO &amp; organic growth</a></li>
+          <li><a href="/services-optimization.html">Management &amp; scaling</a></li>
+          <li><a href="/services-audit.html">Digital marketing &amp; pipeline audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-h">Legal</h4>
+        <ul>
+          <li><a href="/tos.html">Terms of Service</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; <span id="footer-year">2026</span> Refine. All rights reserved.</p>
+    <p class="footer-made">Built with meaning.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var yEl = document.getElementById('footer-year');
+  if (yEl) yEl.textContent = new Date().getFullYear();
+})();
+</script>
+
+<script>
+/* SCROLL PROGRESS BAR */
+(function(){
+  var bar = document.querySelector('.rfn-progress-bar');
+  if (!bar) return;
+  function update(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / Math.max(1, h.scrollHeight - h.clientHeight);
+    bar.style.width = Math.min(100, scrolled * 100) + '%';
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update, {passive:true});
+  update();
+})();
+</script>
+</body>
+</html>

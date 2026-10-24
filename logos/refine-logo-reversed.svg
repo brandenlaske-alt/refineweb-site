@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Refine">
+  <title>Refine · full lockup (for dark backgrounds)</title>
+  <rect x="80" y="100" width="200" height="200" rx="30" fill="#F5F1E8"/>
+  <text x="180" y="248"
+        font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-weight="600"
+        font-size="135"
+        letter-spacing="-3"
+        text-anchor="middle">
+    <tspan fill="#1F4E4A">&lt;</tspan><tspan fill="#0B1014">r</tspan><tspan fill="#1F4E4A">&gt;</tspan>
+  </text>
+  <text x="320" y="246"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-weight="700"
+        font-size="128"
+        letter-spacing="-5"
+        fill="#F5F1E8">refine</text>
+</svg>
